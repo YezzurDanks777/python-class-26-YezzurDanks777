@@ -21,26 +21,55 @@ if start_quiz == "Y":
     print()
     
     counter = 0
-    q1 = int(input("How would Python solve 5 * 5? "))
+    q1 = int(input("How does the Dark Lord solve 5 * 5? "))
     if q1 == 25:
         counter += 1
-        print("Yes! You are correct. Python would solve this as 25.")
+        print("Lucky Guess Minion")
     else:
         print("Sorry. That is not correct. ")
+    print()
 
     print("What is the function that we use to output something to the terminal?")
     print("  A - output()")
     print("  B - print()")
     print("  C - format()")
     print("  D - None of the above")
+    print() 
     q2 = input("Your Answer - Choose A/B/C/D: ")
     if q2.upper() == "B":
         counter += 1
-        print("Yes! You are correct. Python would use the print() function to output something to the terminal")
+        print("You just might make it out of this!!! The Dark Lord would use the print() function to output something to the terminal")
     else:
         print("Sorry. This is not correct.")
+    print()
 
+    print("Who invented the first direct energy weapon?")
+    print(" A - Albert Einstein")
+    print(" B - Archimedes of Syracuse")
+    print(" C - Prescott Bush")
+    print(" D - Alexander the Great")
+    print()
+    q3 = input("Your Answer - Choose A/B/C/D: ")
+    if q3.upper() == "B":
+        counter += 1
+        print("Nice!!! Dont Get Any Bad Ideas Now MMWHAHAHH!!!")
+    else: 
+        print("Absolutley Wrong!!! Now let me see them tears MMWHAHAH!!!")
+    print()
 
+    print("When was Club 33 established at Disneyland?")
+    print(" A - 1969")
+    print(" B - 1999")
+    print(" C - 1967")
+    print(" D - 2001")
+    print()
+    q4 = input("Your Answer - Choose A/B/C/D: ")
+    if q4.upper() == "C":
+        counter += 1
+        print("How Did You Know!!! You Must Be Psychic!!!")
+    else:
+        print("NOPE WRONG!!! Walt Disney & his brother said see you soon MMWHAHAHAH!!!")
+    print()
 
     print("* * * * YOUR FINAL SCORE * * * *")
     print(f"Your final score is: {counter} out of 5.")
