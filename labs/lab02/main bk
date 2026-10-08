@@ -4,18 +4,22 @@
 
 # Print out title
 print()
-print("Better Get it Right or Else! Quiz")
-print("\033[31mHAHAHAH\033[0m")
-print(">:)")
+print("Battle For Your Soul!!! Quiz")
+print("\033[31mMWWHAHAHAH!!!\033[0m")
+print("\U0001F604")
 
 print()
-username = input("What is your name? ")
-print(f"Hello, {username}!")
+username = input("What is your Slave Name you worthless minion? ")
+print(f"\033[31mHello, {username}!Are you ready for your penance you eternal minion?MMWHAHAH!!!\033[0m")
+print("\U0001F604")
 
 print()
-start_quiz = input("Do you want to take me awesome quiz? Y/N ")
+start_quiz = input("\033[31mDO YOU WISH TO PROCEED? Y/N \033[0m ")
 if start_quiz == "Y":
-    print("Great! Lets get started!")
+    print("\033[31mMMWHAHAH! Lets Begin!\033[0m")
+    print("\U0001F604")
+    print()
+    
     counter = 0
     q1 = int(input("How would Python solve 5 * 5? "))
     if q1 == 25:
