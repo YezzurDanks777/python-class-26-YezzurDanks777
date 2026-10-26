@@ -18,7 +18,7 @@ print()
 
 # Section 2 Initial Customer Interaction
 
-print("Check our tables out!")
+print("Check out our tables!")
 print("Roll the dice. Must land 7 or 11 to proceed.")
 
 roll = input("Press Enter to roll or enter 2,3, or 12 to opt out: ")
