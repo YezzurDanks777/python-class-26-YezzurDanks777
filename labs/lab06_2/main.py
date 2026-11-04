@@ -1,6 +1,6 @@
 # Starting file for LAB 6-2
 # Include your course number, student first and last name, and date in the comment header
-Sergio Ortiz CS 31 11/4/2026
+# Sergio Ortiz CS 31 11/4/2026
 
 def list(movie_list):
     if len(movie_list) == 0:
