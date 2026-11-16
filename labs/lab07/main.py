@@ -1,20 +1,62 @@
 # Starting file for LAB 7
 # Include your course number, student first and last name, and date in the comment header
+#Sergio Ortiz
+#CS 31 11/15/2026
+
+
+import csv
+
+filename = "trips.csv"
+
+def write_trips(trip):
+    print(trip)
+    with open(filename, "a", newline= "") as file:
+        writer = csv.writer(file)
+        writer.writerow(trip)
+
+def read_trips():
+    trips = []
+    with open(filename, newline="") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            trips.append(row)
+    return trips
+
+def list_trips(trips):
+    print("Distance\tGallons\t\tMPG")
+    for i in range(0, len(trips)):
+        trip = trips[i]
+        print(str(trip[0]) + "\t\t" + str(trip[1]) + "\t\t" + str(trip[2]))
+        
+
 
 def get_miles_driven():
-    while (miles_driven := float(input("Enter miles driven:\t"))) <= 0:                    
-        print("Entry must be greater than zero. Please try again.\n")       
-    return miles_driven
+    while True:
+        miles_driven = float(input("Enter miles driven:    "))
+        if miles_driven > 0:
+            return miles_driven
+        else:                    
+            print("Entry must be greater than zero. Please try again.\n")       
+            continue
           
 def get_gallons_used():
-    while (gallons_used := float(input("Enter gallons of gas:\t"))) <= 0:                    
-        print("Entry must be greater than zero. Please try again.\n")
-    return gallons_used
+    while True:
+        gallons_used = float(input("Enter gallons of gas:    "))
+        if gallons_used > 0:   
+            return gallons_used
+        else:                 
+            print("Entry must be greater than zero. Please try again.\n")
+            continue
         
 def main():
     # display a welcome message
-    print("The Miles Per Gallon program")
+    print("The Miles Per Gallon application")
     print()
+
+    trips = read_trips()
+    list_trips(trips)
+
+    
 
     more = "y"
     while more.lower() == "y":
@@ -22,10 +64,25 @@ def main():
         gallons_used = get_gallons_used()
                                  
         mpg = round((miles_driven / gallons_used), 2)
-        print(f"Miles Per Gallon:\t{mpg}")
+        print("Miles Per Gallon:\t" + str(mpg))
         print()
+
         
+
+        trip = []
+        trip.append(miles_driven)
+        trip.append(gallons_used)
+        trip.append(mpg)
+        
+        trips.append(trip)
+
+        write_trips(trip)
+
+        list_trips(trips)
+        
+
         more = input("More entries? (y or n): ")
+
     
     print("Bye!")
 
